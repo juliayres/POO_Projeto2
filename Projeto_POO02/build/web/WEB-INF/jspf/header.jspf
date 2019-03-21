@@ -1,0 +1,12 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page import="java.util.Date"%>
+
+<link rel="stylesheet" type="text/css" href=" css/main.css" />
+<%@ page pageEncoding="UTF-8" %>
+<% Date d1 = new Date();
+%>
+<div align="center">
+     Hora atual: <%=d1%>
+</div>
+  
+<br>
