@@ -1,7 +1,7 @@
 <%-- 
     Document   : tabela
-    Created on : 15/03/2019, 22:03:25
-    Author     : Julia
+    Created on : 17/03/2019, 20:03:15
+    Author     : Leticia
 --%>
 
 <%@page import="java.text.DecimalFormat"%>
@@ -19,7 +19,7 @@
         </header>
         <style>
             .tabela, td, th {
-                border: 1px solid black;
+                border: ;
             }
             
             .tabela th{
@@ -31,16 +31,19 @@
          <center>
                 
                 <H1>Tabela Price</H1> 
-          <table border="0" width="100%">
+          
         <br>
         <br>
         <table width="100%">
+            <tr align="center">
         <form>
-            Valor Empréstimo:<input type="number" name="emprestimo">
-            Taxa de Juros:<input type="number" step="0.01" name="taxa">
-            Nº de Parcelas:<input type="number" name="parcelas">
-            <input type="submit" name="calcular" value="Calcular">
+            <td> Empréstimo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="emprestimo"><br>
+            Taxa de Juros:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" step="0.01" name="taxa"><br>
+            Nº de Parcelas:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="parcelas"><br>
+            <input type="submit" name="calcular" value="Calcular"><br>
         </form>
+        </td>       
+        <td>
         <br>
         <br>
         <%if(request.getParameter("calcular") != null){
@@ -60,8 +63,7 @@
             DecimalFormat df = new DecimalFormat();
             df.applyPattern("R$ #,##0.00");
            
-            %><table class="tabela">
-                <thead>
+            %><table class="tabela" border="1">                <thead>
                     <th> Parcela </th>    
                     <th> Prestação </th>  
                     <th> Juros </th>  
@@ -100,6 +102,8 @@
                 </tr>
             </table>
         <%}%>
+        </td>
+        </tr>
         </table>   
      </div>     
     </body>
