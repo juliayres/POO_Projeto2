@@ -36,7 +36,7 @@
         <br>
         <table width="100%">
         <form>
-            Empréstimo:<input type="number" name="emprestimo">
+            Valor Empréstimo:<input type="number" name="emprestimo">
             Taxa de Juros:<input type="number" step="0.01" name="taxa">
             Nº de Parcelas:<input type="number" name="parcelas">
             <input type="submit" name="calcular" value="Calcular">
